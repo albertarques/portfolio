@@ -1,0 +1,7 @@
+{
+  "hero" : {
+    "title":["h1", "Hi, I am Albert Arques."],
+    "text":["p", "Full stack developer making things to the web."],
+    "text2": ["p", "Based in the center of Ebro Delta."]
+  }
+}

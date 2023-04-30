@@ -10,18 +10,97 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 255, 0;
+    --background-start-rgb: 2, 10, 2;
+    --background-end-rgb: 2, 5, 2;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  border: solid, 2px,;
+  text-shadow: 0px 0px 20px;
   background: linear-gradient(
       to bottom,
-      transparent,
+      rgb(var(--background-start-rgb)),
       rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    );
+  font-family: 'Roboto Mono', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-start-rgb));
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.border-f {
+  border: 2px solid;
+  box-shadow: 0 0 10px;
+  box-shadow: inset 0 0 50px, 0 0 10px;
+}
+
+.border-f-hover {
+  border: 2px solid ;
+  box-shadow: 0 0 20px ;
+  box-shadow: inset 0 0 10px , 0 0 10px ;
+}
+
+.frame {
+  left: 3vw;
+  right: 3vw;
+  top: 3vw;
+  bottom: 3vw;
+  border-radius: 4rem;
+}
+
+.effect-shape {
+  left: 3vw;
+  right: 3vw;
+  top: 3vw;
+  bottom: 3vw;
+  border-radius: 4rem;
+  position: fixed;
+  z-index: -2;
+  box-shadow: inset 0px 0px 10px 10px;
+}
+
+.crt-profile {
+  border-radius: 25% 25% 25% 25%;
+}
+
+.crt-img-profile {
+  filter: hue-rotate(90deg);
+}
+
+.margin-top {
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+
+.margin-bottom {
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 0;
+}
+
+.margin-left {
+  height: 100%;
+  width: 5%;
+  position: fixed;
+  left: 0;
+  z-index: 0;
+
+}
+
+.margin-right {
+  height: 100%;
+  width: 5%;
+  position: fixed;
+  right: 0;
+  z-index: 0;
 }
