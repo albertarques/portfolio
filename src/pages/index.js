@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
 
 import Navbar from '@/components/navbar/Navbar'
 import Hero from '@/components/hero/Hero'
@@ -10,12 +9,17 @@ import Columns from '@/components/grid/Columns'
 import Column from '@/components/columns/Column'
 import TagButton from '@/components/tags/TagButton'
 
+// const inter = Inter({ subsets: ['latin'] })
+const robot = Roboto_Mono({ subsets: ['latin'] })
 
-const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Based() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className={`${robot.className}`}>
+      
+      <div className='flex flex-col frame border-f fixed overflow-y-scroll items-center'>
+      <div class="effect-shape fixed"></div>
       <Navbar />
       <Hero
         title = "Hi, I am Albert Arques."
@@ -26,10 +30,12 @@ export default function Home() {
             <u>Ebro delta.</u>
           </a>
         ]}
+        className="my-3"
       />
       <Section 
         id= "works"
         title = "Some of my works:"
+        className="text-xl"
         >
           <div className='grid grid-cols-1 lg:grid-cols-3'>
             <WorkCard 
@@ -41,7 +47,7 @@ export default function Home() {
             <WorkCard
             title = "Work 2"
             description="This is the description for the work 2."
-            picture={"/default_product_img.png"}
+            picture={"/985-536x354.jpg"}
             tags = {["React", "Next.js", "Tailwind"]}
             />
             <WorkCard
@@ -56,18 +62,16 @@ export default function Home() {
       <Section
         id= "skills"
         title = "My Skills"
-        className="text-2xl"
-      >
+        >
         <Columns
           cols="3"
           gap="4"
-          className="text-xl"
-        >
+          >
           <Column>
-            <h3 className='font-bold py-2'>
+            <h3 className={`${robot.className} font-bold py-2 mb-4`}>
               Languages
             </h3>
-            <p className='flex flex-wrap'>
+            <p className={`${robot.className} flex flex-wrap`}>
               <TagButton tag="PHP" />
               <TagButton tag="Javascript" />
               <TagButton tag="HTML" />
@@ -77,7 +81,7 @@ export default function Home() {
             </p>
           </Column>
           <Column>
-            <h3 className='font-bold py-2'>
+            <h3 className='font-bold py-2 mb-4'>
               Technologies
             </h3>
             <p className='flex flex-wrap'>
@@ -93,7 +97,7 @@ export default function Home() {
 
           </Column>
           <Column>
-            <h3 className='font-bold py-2'>
+            <h3 className='font-bold py-2 mb-4'>
                 Transversal
             </h3>
             <p className='flex flex-wrap'>
@@ -106,97 +110,19 @@ export default function Home() {
               <TagButton tag="Time management" />
             </p>
           </Column>
-
         </Columns>
       </Section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <Section>
+        <h2 className="text-4xl font-bold mb-4">About me</h2>
+        <p className="text-xl">
+          I am a full stack developer with a passion for web development. I have
+          been working in the web development industry for more than 10 years.
+          I have worked in different companies and projects, from small
+          businesses to big companies. I have experience in both frontend and
+          backend development, but I am more focused on frontend development.
+        </p>
+      </Section>
       </div>
     </main>
   )
