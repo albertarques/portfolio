@@ -3,13 +3,13 @@ import Link from "next/link";
 // TODO: Create a navbar component
 export default function Navbar() {
   return (
-    <div className="container flex flex-row justify-between p-5 lg:text-2xl text-xl">
-      <div className="brand">
-        <Link href="/">A::Portfolio</Link>
+    <div className="w-full sticky top-0 flex flex-row justify-between lg:text-2xl text-xl">
+      <div className="border-f brand frame-f block py-3 px-6 font-bold">
+        <Link href="/">AA_Portfolio</Link>
       </div>
       <nav className="flex justify-end">
-        <ul className="">
-          <li className="mr-5">
+        <ul className="border-f brand frame-f bg-current block py-3 px-6 font-bold">
+          <li className="">
             <Link href="/about">About</Link>
           </li>
         </ul>
