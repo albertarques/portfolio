@@ -19,17 +19,12 @@ export default function Based() {
     <main className={`${robot.className}`}>
       
       <div className='flex flex-col frame border-f fixed overflow-y-scroll items-center'>
-      <div class="effect-shape fixed"></div>
+      <div className="effect-shape fixed"></div>
       <Navbar />
       <Hero
         title = "Hi, I am Albert Arques."
         subtitle = "Full stack developer making things for the web."
-        subtitle2 = {[
-          "Based in center of ", 
-          <a href="https://www.turismodeltadelebro.com/en/what-to-see-and-do-in-the-ebro-delta/" target='_blank'>
-            <u>Ebro delta.</u>
-          </a>
-        ]}
+        subtitle2 = "Based in the middle of, Ebro delta."
         className="my-3"
       />
       <Section 
