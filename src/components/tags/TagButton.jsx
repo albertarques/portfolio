@@ -1,5 +1,5 @@
-export default function TagButton({tag}) {
+export default function TagButton({tag, className}) {
   return (
-    <span className="border rounded-full px-3 mr-2 mb-2">{tag}</span>
+    <span className={`rounded-full px-4 py-1 mr-4 mb-4 ${className}`}>{tag}</span>
   )
 }
