@@ -15,7 +15,7 @@ export default function WorkCard({
   if (hoverState) {
     return (
       <div
-        className={[`border-f m-3 p-3 pb-3 border z-10 cursor-pointer ${className}`]}
+        className={[`border-f m-3 p-3 pb-3 border cursor-pointer ${className}`]}
         onMouseLeave={() => setHoverState(false)}
       >
         <h3 className="text-2xl">{title}</h3>
@@ -42,7 +42,7 @@ export default function WorkCard({
     return (
       <div
         className={[
-          `border-f-hover m-3 p-3 pb-3 z-10 border cursor-pointer ${className}`,
+          `border-f-hover m-3 p-3 pb-3 border cursor-pointer ${className}`,
         ]}
         onMouseEnter={() => setHoverState(true)}
       >

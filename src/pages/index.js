@@ -19,7 +19,7 @@ export default function Based() {
     <main className={`${robot.className}`}>
       
       <div className='flex flex-col frame border-f fixed overflow-y-scroll items-center'>
-      <div className="effect-shape fixed"></div>
+      <div className="effect-shape rounded-xl lg:rounded-[5rem] fixed"></div>
       <Navbar />
       <Hero
         title = "Hi, I am Albert Arques."
