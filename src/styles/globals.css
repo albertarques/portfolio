@@ -17,7 +17,6 @@
 }
 
 body {
-  border: solid, 2px,;
   text-shadow: 0px 0px 20px;
   background: linear-gradient(
       to bottom,
@@ -54,11 +53,10 @@ main {
 }
 
 .effect-shape {
-  left: 3vw;
-  right: 3vw;
-  top: 3vw;
-  bottom: 3vw;
-  border-radius: 4rem;
+  left: 1vw;
+  right: 1vw;
+  top: 1vw;
+  bottom: 1vw;
   position: fixed;
   z-index: -2;
   box-shadow: inset 0px 0px 10px 10px;
